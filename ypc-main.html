@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Young Politicians Collective | Official Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #0a192f; --gold: #c5a059; --slate: #050505; --white: #ffffff; }
+        body { margin: 0; font-family: 'Inter', sans-serif; background: var(--slate); color: white; overflow-x: hidden; }
+
+        /* Navigation */
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 20px 5%; background: rgba(10, 25, 47, 0.95); position: sticky; top: 0; z-index: 1000; border-bottom: 1px solid var(--gold); }
+        .nav-logo { font-family: 'Cinzel'; font-weight: 700; color: var(--gold); letter-spacing: 2px; }
+        .nav-links a { color: white; text-decoration: none; margin-left: 30px; font-size: 0.8rem; font-family: 'Cinzel'; transition: 0.3s; }
+        .nav-links a:hover { color: var(--gold); }
+
+        /* Hero Section */
+        .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1600&q=80'); background-size: cover; background-position: center; }
+        .hero h1 { font-family: 'Cinzel'; font-size: 3.5rem; margin: 0; color: white; }
+        .hero p { max-width: 800px; color: var(--gold); letter-spacing: 2px; font-size: 1rem; text-transform: uppercase; margin-top: 10px; }
+        .cta-group { margin-top: 40px; }
+        .btn-gold { background: var(--gold); color: black; padding: 15px 40px; text-decoration: none; font-family: 'Cinzel'; font-weight: bold; margin: 10px; display: inline-block; transition: 0.3s; }
+        .btn-outline { border: 1px solid white; color: white; padding: 15px 40px; text-decoration: none; font-family: 'Cinzel'; margin: 10px; display: inline-block; transition: 0.3s; }
+
+        /* Mission Grid */
+        .mission-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; padding: 80px 10%; background: white; color: var(--blue); }
+        .mission-card { text-align: center; padding: 30px; }
+        .mission-card h3 { font-family: 'Cinzel'; font-size: 1.2rem; margin-bottom: 15px; color: var(--blue); }
+        .mission-card p { font-size: 0.9rem; line-height: 1.6; color: #555; }
+
+        /* Footer */
+        footer { padding: 40px 10%; background: var(--blue); text-align: center; border-top: 5px solid var(--gold); font-size: 0.7rem; color: #888; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-logo">YPC FOUNDATION</div>
+        <div class="nav-links">
+            <a href="ypc-grants.html">Impact Hub</a>
+            <a href="ypc-marketplace.html">The Foundry</a>
+            <a href="ypc-nonprofit.html">Alliance</a>
+            <a href="ypc-register.html" style="border: 1px solid var(--gold); padding: 5px 15px;">Enroll Now</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <p>Training the Architects of the Next Republic</p>
+        <h1>The Future Gavel Initiative</h1>
+        <div class="cta-group">
+            <a href="ypc-ambition.html" class="btn-gold">Start Ambition Map</a>
+            <a href="ypc-donate.html" class="btn-outline">Sustain the Movement</a>
+        </div>
+    </header>
+
+    <section class="mission-grid">
+        <div class="mission-card">
+            <h3>Sovereign Education</h3>
+            <p>Moving beyond standard curricula to provide high-level training in law, diplomacy, and the Goodness Code.</p>
+        </div>
+        <div class="mission-card">
+            <h3>Civic Infrastructure</h3>
+            <p>Deploying a national network of Safe Haven Nodes where political theory meets community practice.</p>
+        </div>
+        <div class="mission-card">
+            <h3>Legacy Protection</h3>
+            <p>Establishing the legal and digital trusts required to protect the intellectual and cultural property of our youth.</p>
+        </div>
+    </section>
+
+    <footer>
+        THIN BLACK AND BROWN LINES USA // YOUNG POLITICIANS COLLECTIVE © 2026<br>
+        <a href="ypc-privacy.html" style="color:#888; text-decoration:none;">Privacy Shield</a> | <a href="ypc-terms.html" style="color:#888; text-decoration:none;">Social Contract</a>
+    </footer>
+
+</body>
+</html>
