@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transparency & Governance | YPC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #0a192f; --gold: #c5a059; --slate: #f8f9fa; --border: #e0e0e0; }
+        body { margin: 0; display: flex; font-family: 'Inter', sans-serif; background: var(--slate); }
+
+        /* Sidebar Navigation */
+        .sidebar { width: 280px; background: var(--blue); height: 100vh; position: fixed; color: white; padding: 40px 20px; box-sizing: border-box; }
+        .sidebar a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; }
+        
+        /* Main Content */
+        .main-content { margin-left: 280px; width: 100%; padding: 60px 8%; box-sizing: border-box; }
+        .header-top { display: flex; justify-content: flex-end; padding: 20px 0; border-bottom: 1px solid var(--border); margin-bottom: 40px; }
+        .text-logo { font-family: 'Cinzel'; font-weight: 700; font-size: 0.8rem; color: var(--blue); letter-spacing: 2px; }
+
+        .report-section { background: white; border: 1px solid var(--border); padding: 40px; margin-bottom: 30px; border-left: 5px solid var(--blue); }
+        h2 { font-family: 'Cinzel'; color: var(--blue); margin-top: 0; }
+        
+        /* Data Table */
+        .data-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        .data-table th { text-align: left; font-family: 'Cinzel'; font-size: 0.7rem; color: #888; border-bottom: 1px solid var(--border); padding: 10px 0; }
+        .data-table td { padding: 15px 0; border-bottom: 1px dotted var(--border); font-size: 0.9rem; }
+        .status-dot { height: 10px; width: 10px; background-color: #2ecc71; border-radius: 50%; display: inline-block; margin-right: 5px; }
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div style="font-family:'Cinzel'; color:var(--gold); margin-bottom:40px; font-size: 1.1rem;">THE COLLECTIVE</div>
+        <a href="ypc-main.html">Initiative Home</a>
+        <a href="ypc-grants.html">Grant Alignment</a>
+        <a href="ypc-donate.html">Donation Center</a>
+        <a href="ypc-transparency.html" style="color:var(--gold);">Transparency & Ethics</a>
+        <a href="ypc-marketplace.html">Digital Product Vault</a>
+    </nav>
+
+    <div class="main-content">
+        <div class="header-top">
+            <div class="text-logo">YOUNG POLITICIANS COLLECTIVE // GOVERNANCE PORTAL</div>
+        </div>
+
+        <section class="report-section">
+            <h2>Fiscal Responsibility Report</h2>
+            <p style="color:#666; font-size: 0.9rem;">The YPC operates as a transparent non-profit entity. 85% of all donations go directly to youth development and Node infrastructure.</p>
+            <table class="data-table">
+                <thead>
+                    <tr><th>ALLOCATION SOURCE</th><th>STATUS</th><th>PERCENTAGE</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Youth Digital Certifications</td><td><span class="status-dot"></span>Active</td><td>40%</td></tr>
+                    <tr><td>Physical Node Logistics</td><td><span class="status-dot"></span>Active</td><td>25%</td></tr>
+                    <tr><td>Civic-Tech R&D</td><td><span class="status-dot"></span>Active</td><td>20%</td></tr>
+                    <tr><td>Operational Administration</td><td><span class="status-dot"></span>Optimized</td><td>15%</td></tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="report-section" style="border-left-color: var(--gold);">
+            <h2>Ethics & The Goodness Code</h2>
+            <p>Our "Young Politicians" are held to a higher standard of conduct. Every member must sign the Sovereign Ethics Agreement, which dictates that political power must be used for the upliftment of the community, never personal gain.</p>
+            <div style="margin-top:20px;">
+                <button style="background:var(--blue); color:white; border:none; padding:10px 20px; font-family:'Cinzel'; font-size: 0.7rem; cursor:pointer;">DOWNLOAD ETHICS BYLAWS (PDF)</button>
+            </div>
+        </section>
+    </div>
+
+</body>
+</html>
