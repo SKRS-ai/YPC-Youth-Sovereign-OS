@@ -3,92 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CastAiStars | The Digital Backlot</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <title>Young Politicians Collective | The Future Gavel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #000; }
+        :root { 
+            --blue: #0a192f; 
+            --gold: #c5a059; 
+            --gold-bright: #eec170;
+            --slate: #050505; 
+            --white: #ffffff;
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        * { box-sizing: border-box; }
+        body { margin: 0; font-family: 'Inter', sans-serif; background: var(--slate); color: var(--white); overflow-x: hidden; scroll-behavior: smooth; }
+
+        /* Enhanced Navigation */
+        nav { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 20px 5%; background: rgba(10, 25, 47, 0.9); 
+            backdrop-filter: blur(10px); position: fixed; width: 100%; top: 0; z-index: 1000; 
+            border-bottom: 1px solid var(--gold);
+        }
+        .nav-logo { font-family: 'Cinzel'; font-weight: 700; color: var(--gold); letter-spacing: 3px; font-size: 1.2rem; cursor: pointer; }
+        .nav-links a { 
+            color: var(--white); text-decoration: none; margin-left: 30px; 
+            font-size: 0.75rem; font-family: 'Cinzel'; transition: 0.3s; letter-spacing: 1px;
+        }
+        .nav-links a:hover { color: var(--gold-bright); text-shadow: 0 0 10px rgba(197, 160, 89, 0.5); }
+        .nav-cta { border: 1px solid var(--gold); padding: 8px 20px; transition: 0.3s; }
+        .nav-cta:hover { background: var(--gold); color: var(--blue) !important; }
+
+        /* Hero Section with Depth */
+        .hero { 
+            height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            text-align: center; background: linear-gradient(rgba(5, 5, 5, 0.8), rgba(5, 5, 5, 0.6)), 
+            url('https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?auto=format&fit=crop&w=1600&q=80'); 
+            background-size: cover; background-attachment: fixed; padding: 0 20px;
+        }
+        .hero p { 
+            color: var(--gold); letter-spacing: 5px; font-size: 0.85rem; 
+            text-transform: uppercase; margin-bottom: 15px; font-weight: 600;
+        }
+        .hero h1 { 
+            font-family: 'Cinzel'; font-size: clamp(2.5rem, 8vw, 4.5rem); margin: 0; 
+            line-height: 1.1; filter: drop-shadow(0 0 20px rgba(0,0,0,0.5));
+        }
+        .cta-group { margin-top: 50px; display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; }
         
-        /* Nebula Pulse Animation */
-        @keyframes nebula-pulse {
-            0% { transform: scale(1); filter: drop-shadow(0 0 5px rgba(0, 229, 255, 0.4)); }
-            50% { transform: scale(1.05); filter: drop-shadow(0 0 20px rgba(0, 229, 255, 0.8)); }
-            100% { transform: scale(1); filter: drop-shadow(0 0 5px rgba(0, 229, 255, 0.4)); }
+        /* Unified Button Styling */
+        .btn { 
+            padding: 18px 45px; font-family: 'Cinzel'; font-weight: bold; 
+            font-size: 0.9rem; text-decoration: none; text-transform: uppercase; 
+            letter-spacing: 2px; transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
-        .nebula-star {
-            animation: nebula-pulse 4s ease-in-out infinite;
+        .btn-gold { background: var(--gold); color: var(--blue); }
+        .btn-gold:hover { background: var(--gold-bright); transform: translateY(-3px); box-shadow: 0 10px 25px rgba(197, 160, 89, 0.3); }
+        .btn-outline { border: 1px solid var(--white); color: var(--white); }
+        .btn-outline:hover { background: var(--white); color: var(--blue); transform: translateY(-3px); }
+
+        /* Feature Matrix (Glassmorphism) */
+        .features { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 2px; background: rgba(197, 160, 89, 0.2); border-top: 1px solid var(--gold);
         }
-        .text-gradient {
-            background: linear-gradient(to right, #ffffff, #00e5ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .feature-box { 
+            background: var(--blue); padding: 80px 40px; text-align: center; 
+            transition: 0.5s; cursor: default;
         }
-        .glass-panel {
-            background: rgba(17, 24, 39, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .feature-box:hover { background: #0d1f3d; }
+        .feature-box i { font-size: 2rem; color: var(--gold); margin-bottom: 20px; display: block; }
+        .feature-box h3 { font-family: 'Cinzel'; font-size: 1.3rem; margin-bottom: 15px; color: var(--gold); }
+        .feature-box p { font-size: 0.9rem; color: #aab4c3; line-height: 1.8; margin: 0; }
+
+        /* Impact Section */
+        .impact-bar { 
+            padding: 60px 10%; background: var(--gold); color: var(--blue); 
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 30px;
         }
+        .impact-item h2 { font-family: 'Cinzel'; font-size: 2.5rem; margin: 0; }
+        .impact-item span { font-size: 0.7rem; text-transform: uppercase; font-weight: bold; letter-spacing: 2px; }
+
+        /* Footer */
+        footer { 
+            padding: 60px 10%; background: var(--slate); text-align: center; 
+            border-top: 1px solid #222; font-size: 0.75rem; color: #666; 
+        }
+        .footer-logo { font-family: 'Cinzel'; color: var(--gold); margin-bottom: 20px; display: block; font-size: 1rem; }
     </style>
 </head>
-<body class="text-white overflow-x-hidden">
+<body>
 
-    <nav class="fixed w-full z-50 glass-panel">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 bg-cyan-500 rounded flex items-center justify-center nebula-star">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="black"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14l-5-4.87 6.91-1.01L12 2z"/></svg>
-                </div>
-                <span class="text-2xl font-black tracking-tighter uppercase">Cast<span class="text-cyan-400">AI</span>Stars</span>
-            </div>
-            <div class="hidden md:flex gap-8 text-sm font-bold uppercase tracking-widest text-gray-400">
-                <a href="#" class="hover:text-cyan-400 transition">The Backlot</a>
-                <a href="#" class="hover:text-cyan-400 transition">For Directors</a>
-                <a href="#" class="hover:text-cyan-400 transition">For Creators</a>
-            </div>
-            <button class="bg-white text-black px-6 py-2 rounded-full font-bold text-xs uppercase tracking-widest hover:bg-cyan-400 transition">Beta Access</button>
+    <nav>
+        <div class="nav-logo">YPC FOUNDATION</div>
+        <div class="nav-links">
+            <a href="ypc-grants.html">Institution</a>
+            <a href="ypc-marketplace.html">Foundry</a>
+            <a href="ypc-assembly.html">Assembly</a>
+            <a href="ypc-register.html" class="nav-cta">Enroll Candidate</a>
         </div>
     </nav>
 
-    <section class="relative h-screen flex items-center justify-center pt-20">
-        <div class="absolute inset-0 z-0 opacity-30">
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-cyan-600 rounded-full mix-blend-screen filter blur-[120px] animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-900 rounded-full mix-blend-screen filter blur-[120px] animate-pulse"></div>
+    <header class="hero">
+        <p>Architecting the Next Century</p>
+        <h1>The Young Politicians Collective</h1>
+        <div class="cta-group">
+            <a href="ypc-ambition.html" class="btn btn-gold">Map Your Ambition</a>
+            <a href="ypc-donate.html" class="btn btn-outline">Sustain the Movement</a>
         </div>
+    </header>
 
-        <div class="relative z-10 text-center max-w-4xl px-6">
-            <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-6 leading-none">
-                THE FUTURE OF FAME IS <span class="text-gradient">SYNTHETIC.</span>
-            </h1>
-            <p class="text-xl md:text-2xl text-gray-400 mb-10 font-light max-w-2xl mx-auto">
-                Welcome to the Headquarters. Cast verified virtual stars for your next production. Powered by <span class="text-white font-bold">Solomon Kin Records</span>.
-            </p>
-            
-            <div class="flex flex-col md:flex-row gap-4 justify-center">
-                <button class="bg-cyan-500 text-black px-10 py-4 rounded-lg font-black text-lg uppercase tracking-widest hover:bg-cyan-400 shadow-[0_0_20px_rgba(0,229,255,0.4)] transition">Enter the Office</button>
-                <button class="border border-gray-700 hover:border-white px-10 py-4 rounded-lg font-black text-lg uppercase tracking-widest transition">Register a Star</button>
-            </div>
+    <section class="impact-bar">
+        <div class="impact-item">
+            <h2>50+</h2>
+            <span>Digital Certifications</span>
         </div>
-    </section>
-
-    <section class="max-w-7xl mx-auto px-6 py-24 border-t border-gray-900">
-        <div class="grid md:grid-cols-3 gap-12">
-            <div class="glass-panel p-8 rounded-2xl">
-                <h3 class="text-cyan-400 font-bold mb-4 uppercase tracking-widest">Verified Continuity</h3>
-                <p class="text-gray-400">Our stars maintain visual consistency across every scene. No "uncanny valley," just professional assets.</p>
-            </div>
-            <div class="glass-panel p-8 rounded-2xl">
-                <h3 class="text-cyan-400 font-bold mb-4 uppercase tracking-widest">The Digital Soul</h3>
-                <p class="text-gray-400">Every talent registry includes a unique, consistent Voice ID curated by Solomon Kin Records.</p>
-            </div>
-            <div class="glass-panel p-8 rounded-2xl">
-                <h3 class="text-cyan-400 font-bold mb-4 uppercase tracking-widest">Smart Licensing</h3>
-                <p class="text-gray-400">Automated casting contracts that protect creators and empower directors in one click.</p>
-            </div>
+        <div class="impact-item">
+            <h2>25</h2>
+            <span>Global Foundation Partners</span>
+        </div>
+        <div class="impact-item">
+            <h2>100%</h2>
+            <span>Data Sovereignty</span>
+        </div>
+        <div class="impact-item">
+            <h2>$0</h2>
+            <span>Barrier to Entry</span>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-gray-900 text-center text-gray-600">
-        <p class="text-xs uppercase tracking-[0.5em]">&copy; 2026 Solomon Kin Records LLC. All Rights Reserved.</p>
+    <section class="features">
+        <div class="feature-box">
+            <h3>Sovereign Academy</h3>
+            <p>Advanced curricula in legislative drafting, civic technology, and diplomacy designed to protect the mind and legacy of the youth.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Safe Haven Nodes</h3>
+            <p>A national infrastructure of physical "Nodes" where Young Politicians meet mentors and engage in real-world policy simulations.</p>
+        </div>
+        <div class="feature-box">
+            <h3>Gavel Initiative</h3>
+            <p>Moving from theory to power. We empower the youth to draft actual local policies that are reviewed by legal and political experts.</p>
+        </div>
+    </section>
+
+    <footer>
+        <span class="footer-logo">THIN BLACK AND BROWN LINES USA</span>
+        <p>A Foundation Dedicated to the Ethical Sovereignty of Future Leaders.</p>
+        <div style="margin: 20px 0;">
+            <a href="ypc-privacy.html" style="color:#888; text-decoration:none; margin:0 10px;">Privacy Shield</a> | 
+            <a href="ypc-terms.html" style="color:#888; text-decoration:none; margin:0 10px;">Social Contract</a> | 
+            <a href="ypc-transparency.html" style="color:#888; text-decoration:none; margin:0 10px;">Transparency Portal</a>
+        </div>
+        <p style="opacity: 0.5;">© 2026 YOUNG POLITICIANS COLLECTIVE. ALL RIGHTS RESERVED.</p>
     </footer>
 
 </body>
