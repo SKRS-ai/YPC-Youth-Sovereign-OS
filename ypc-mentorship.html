@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mentorship Connection | YPC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #0a192f; --gold: #c5a059; --slate: #111; --white: #f8f9fa; }
+        body { margin: 0; display: flex; font-family: 'Inter', sans-serif; background: var(--white); }
+
+        /* Sidebar Navigation */
+        .sidebar { width: 280px; background: var(--blue); height: 100vh; position: fixed; color: white; padding: 40px 20px; box-sizing: border-box; }
+        .sidebar a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; }
+        
+        /* Main Content */
+        .main-content { margin-left: 280px; width: 100%; min-height: 100vh; }
+        .header-top { display: flex; justify-content: flex-end; padding: 20px 5%; background: white; border-bottom: 1px solid #eee; }
+        .text-logo { font-family: 'Cinzel'; font-weight: 700; font-size: 0.9rem; color: var(--blue); letter-spacing: 2px; }
+
+        /* Mentor Grid */
+        .mentor-grid { padding: 50px 10%; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        .mentor-card { background: white; border: 1px solid #ddd; padding: 30px; position: relative; overflow: hidden; }
+        .mentor-card::before { content: ""; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--gold); }
+        
+        .path-badge { font-size: 0.6rem; color: var(--gold); text-transform: uppercase; letter-spacing: 2px; font-weight: bold; }
+        .mentor-name { font-family: 'Cinzel'; font-size: 1.2rem; margin: 10px 0; color: var(--blue); }
+        .mentor-bio { font-size: 0.85rem; color: #666; line-height: 1.6; margin-bottom: 20px; }
+        
+        .btn-connect { display: inline-block; padding: 10px 20px; border: 1px solid var(--blue); color: var(--blue); text-decoration: none; font-family: 'Cinzel'; font-size: 0.7rem; font-weight: bold; transition: 0.3s; }
+        .btn-connect:hover { background: var(--blue); color: white; }
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div style="font-family:'Cinzel'; color:var(--gold); margin-bottom:40px;">YPC NAVIGATION</div>
+        <a href="ypc-main.html">Initiative Home</a>
+        <a href="ypc-ambition.html">Ambition Mapping</a>
+        <a href="ypc-mentorship.html" style="color:var(--gold);">Find a Mentor</a>
+        <a href="ypc-marketplace.html">Digital Product Vault</a>
+        <a href="dashboard.html" style="margin-top:50px;">Return to Vault</a>
+    </nav>
+
+    <div class="main-content">
+        <div class="header-top">
+            <div class="text-logo">YOUNG POLITICIANS COLLECTIVE // MENTORSHIP CONNECTION</div>
+        </div>
+
+        <div style="padding: 60px 10% 0;">
+            <h1 style="font-family:'Cinzel'; color:var(--blue); margin:0;">Connect with an Architect</h1>
+            <p style="color:#888;">Select a mentor based on your Path Selection from the Ambition Map.</p>
+        </div>
+
+        <div class="mentor-grid">
+            <div class="mentor-card">
+                <span class="path-badge">The Gavel (Legislative)</span>
+                <h3 class="mentor-name">Architect Julian Reed</h3>
+                <p class="mentor-bio">Specializing in Constitutional Law and Village Policy drafting. 15 years of experience in municipal governance.</p>
+                <a href="#" class="btn-connect">REQUEST MENTORSHIP</a>
+            </div>
+
+            <div class="mentor-card">
+                <span class="path-badge">The Shield (Judicial)</span>
+                <h3 class="mentor-name">Chief Justice Elena Vance</h3>
+                <p class="mentor-bio">Expert in Restorative Justice and High Court protocols. Mentoring youth in the art of the Constitutional Defense.</p>
+                <a href="#" class="btn-connect">REQUEST MENTORSHIP</a>
+            </div>
+
+            <div class="mentor-card">
+                <span class="path-badge">The Pen (Diplomatic)</span>
+                <h3 class="mentor-name">Envoy Marcus Thorne</h3>
+                <p class="mentor-bio">International Relations and Foreign Affairs specialist. Teaching the power of negotiation and treaty building.</p>
+                <a href="#" class="btn-connect">REQUEST MENTORSHIP</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
