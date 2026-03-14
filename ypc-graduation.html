@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sovereign Graduation | YPC Alumni</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #050a15; --gold: #c5a059; --accent: #eec170; --white: #ffffff; }
+        body { margin: 0; font-family: 'Inter', sans-serif; background: var(--blue); color: var(--white); overflow-x: hidden; }
+
+        /* Full Screen Celebration */
+        .grad-hero { 
+            height: 70vh; display: flex; flex-direction: column; justify-content: center; 
+            align-items: center; text-align: center; border-bottom: 2px solid var(--gold);
+            background: radial-gradient(circle, rgba(197, 160, 89, 0.1) 0%, rgba(5, 10, 21, 1) 70%);
+        }
+        .grad-hero h1 { font-family: 'Cinzel'; font-size: 4rem; margin: 10px 0; color: var(--gold); }
+        .laurel { width: 120px; margin-bottom: 20px; filter: sepia(1) saturate(5); }
+
+        /* Credentials Section */
+        .credentials-grid { 
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; padding: 80px 10%; background: #080e1a; 
+        }
+        .credential-card { 
+            background: rgba(255,255,255,0.03); border: 1px solid rgba(197, 160, 89, 0.3); 
+            padding: 40px; text-align: center; position: relative;
+        }
+        .credential-card h3 { font-family: 'Cinzel'; color: var(--gold); margin-top: 0; }
+        .seal-bg { 
+            position: absolute; bottom: -20px; right: -20px; font-size: 5rem; 
+            opacity: 0.05; font-family: 'Cinzel'; font-weight: bold; 
+        }
+
+        /* Alumni Path */
+        .alumni-cta { padding: 100px 10%; text-align: center; }
+        .btn-alumni { 
+            background: var(--gold); color: var(--blue); padding: 20px 60px; 
+            text-decoration: none; font-family: 'Cinzel'; font-weight: bold; 
+            font-size: 1.1rem; letter-spacing: 2px; transition: 0.4s;
+        }
+        .btn-alumni:hover { background: var(--accent); transform: scale(1.05); }
+
+        .text-logo { font-family: 'Cinzel'; font-size: 0.8rem; color: var(--gold); letter-spacing: 5px; margin-top: 50px; opacity: 0.6; }
+    </style>
+</head>
+<body>
+
+    <section class="grad-hero">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Wreath_gold.svg" class="laurel" alt="Excellence">
+        <p style="font-family: 'Cinzel'; letter-spacing: 5px; color: var(--gold);">COMMENCEMENT 2026</p>
+        <h1>Architect of the Republic</h1>
+        <p style="max-width: 700px; color: #8892b0; font-size: 1.1rem; line-height: 1.6;">Julian Reed Jr., you have completed the Sovereign Curriculum. You now hold the credentials to draft, debate, and lead.</p>
+    </section>
+
+    <div class="credentials-grid">
+        <div class="credential-card">
+            <h3>The Gavel Seal</h3>
+            <p style="font-size: 0.85rem; color: #8892b0;">Verified Mastery in Legislative Drafting and Constitutional Theory.</p>
+            <div class="seal-bg">GAVEL</div>
+        </div>
+        <div class="credential-card">
+            <h3>The Sovereign Trust</h3>
+            <p style="font-size: 0.85rem; color: #8892b0;">Verified completion of Economic Literacy and Community Fund Management.</p>
+            <div class="seal-bg">TRUST</div>
+        </div>
+        <div class="credential-card">
+            <h3>Village Diplomat</h3>
+            <p style="font-size: 0.85rem; color: #8892b0;">Recognized for cross-Node negotiation and peaceful conflict resolution.</p>
+            <div class="seal-bg">VILLAGE</div>
+        </div>
+    </div>
+
+    <section class="alumni-cta">
+        <h2 style="font-family: 'Cinzel'; margin-bottom: 40px;">ENTER THE ALUMNI ARCHIVE</h2>
+        <a href="#" class="btn-alumni">ACTIVATE LIFETIME CREDENTIALS</a>
+        <br>
+        <div class="text-logo">YOUNG POLITICIANS COLLECTIVE // SOVEREIGN EXIT PORTAL</div>
+    </section>
+
+</body>
+</html>
