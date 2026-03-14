@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hall of Records | YPC Legacy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #0a192f; --gold: #c5a059; --marble: #f4f1ea; --text: #1a1a1a; }
+        body { margin: 0; display: flex; font-family: 'Inter', sans-serif; background: var(--marble); color: var(--text); }
+
+        /* Sidebar Navigation */
+        .sidebar { width: 280px; background: var(--blue); height: 100vh; position: fixed; color: white; padding: 40px 20px; box-sizing: border-box; }
+        .sidebar a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; }
+        
+        /* Main Gallery */
+        .main-content { margin-left: 280px; width: 100%; padding: 80px 10%; box-sizing: border-box; }
+        .archive-header { text-align: center; border-bottom: 2px solid var(--gold); padding-bottom: 40px; margin-bottom: 60px; }
+        .archive-header h1 { font-family: 'Cinzel'; font-size: 2.8rem; margin: 0; color: var(--blue); }
+        .archive-header p { font-family: 'Cinzel'; font-size: 0.8rem; letter-spacing: 4px; color: var(--gold); }
+
+        /* Record Grid */
+        .record-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 40px; }
+        .record-card { background: white; border: 1px solid #ddd; padding: 40px; position: relative; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .record-card::after { content: "OFFICIAL RECORD"; position: absolute; top: 15px; right: 15px; font-size: 0.5rem; color: #ccc; border: 1px solid #eee; padding: 2px 5px; }
+        
+        .record-date { font-size: 0.7rem; color: var(--gold); font-weight: bold; margin-bottom: 10px; display: block; }
+        .record-title { font-family: 'Cinzel'; font-size: 1.2rem; color: var(--blue); margin-bottom: 15px; }
+        .record-author { font-size: 0.8rem; border-top: 1px solid #eee; padding-top: 15px; color: #777; font-style: italic; }
+        
+        .btn-view { display: block; margin-top: 25px; text-align: center; border: 1px solid var(--blue); color: var(--blue); padding: 10px; text-decoration: none; font-family: 'Cinzel'; font-size: 0.7rem; font-weight: bold; }
+        .btn-view:hover { background: var(--blue); color: white; }
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div style="font-family:'Cinzel'; color:var(--gold); margin-bottom:40px; font-size: 1.1rem;">THE REGISTRY</div>
+        <a href="ypc-main.html">Initiative Home</a>
+        <a href="ypc-dashboard.html">Member Dashboard</a>
+        <a href="ypc-assembly.html">Legislative Assembly</a>
+        <a href="ypc-records.html" style="color:var(--gold);">Hall of Records</a>
+        <a href="ypc-transparency.html">Transparency Portal</a>
+    </nav>
+
+    <div class="main-content">
+        <header class="archive-header">
+            <p>Young Politicians Collective</p>
+            <h1>Hall of Records</h1>
+        </header>
+
+        <div class="record-grid">
+            <div class="record-card">
+                <span class="record-date">ADOPTED: OCT 12, 2025</span>
+                <h3 class="record-title">The Community Safety Protocol</h3>
+                <p style="font-size: 0.85rem; line-height: 1.6;">A framework for de-escalation training and community-led response teams within the Philly Node.</p>
+                <div class="record-author">Authored by: Delegate Maya S.</div>
+                <a href="#" class="btn-view">VIEW FULL ARTICLES</a>
+            </div>
+
+            <div class="record-card">
+                <span class="record-date">ADOPTED: JAN 05, 2026</span>
+                <h3 class="record-title">The Sovereign Data Bill</h3>
+                <p style="font-size: 0.85rem; line-height: 1.6;">A policy ensuring all Village youth maintain 100% ownership over their educational and biometric data.</p>
+                <div class="record-author">Authored by: Architect Marcus V.</div>
+                <a href="#" class="btn-view">VIEW FULL ARTICLES</a>
+            </div>
+
+            <div class="record-card">
+                <span class="record-date">ADOPTED: MAR 10, 2026</span>
+                <h3 class="record-title">The Node Energy Act</h3>
+                <p style="font-size: 0.85rem; line-height: 1.6;">A resolution to transition the national Safe Haven network to 100% renewable energy by 2030.</p>
+                <div class="record-author">Authored by: The Youth Assembly</div>
+                <a href="#" class="btn-view">VIEW FULL ARTICLES</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
