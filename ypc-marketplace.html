@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Youth Foundry | YPC Marketplace</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #0a192f; --gold: #c5a059; --slate: #111; --white: #f8f9fa; }
+        body { margin: 0; display: flex; font-family: 'Inter', sans-serif; background: var(--white); }
+
+        /* Sidebar Filters */
+        .filter-sidebar { width: 280px; background: var(--blue); height: 100vh; position: fixed; color: white; padding: 40px 20px; box-sizing: border-box; }
+        .filter-group { margin-bottom: 30px; }
+        .filter-group h4 { font-family: 'Cinzel'; color: var(--gold); font-size: 0.7rem; letter-spacing: 2px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; }
+        .filter-link { display: block; color: #aaa; text-decoration: none; padding: 8px 0; font-size: 0.85rem; }
+        .filter-link:hover { color: white; }
+
+        /* Product Grid */
+        .main-content { margin-left: 280px; width: 100%; padding: 40px; box-sizing: border-box; }
+        .grid-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; }
+        .text-logo { font-family: 'Cinzel'; font-size: 0.9rem; color: var(--blue); letter-spacing: 2px; font-weight: bold; }
+
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+        .product-card { background: white; border: 1px solid #eee; padding: 25px; transition: 0.3s; display: flex; flex-direction: column; }
+        .product-card:hover { border-color: var(--gold); transform: translateY(-5px); }
+        
+        .cat-tag { font-size: 0.6rem; color: var(--gold); font-weight: bold; text-transform: uppercase; margin-bottom: 10px; }
+        .product-card h3 { font-family: 'Cinzel'; font-size: 1.1rem; margin: 0 0 10px 0; color: var(--blue); }
+        .product-card p { font-size: 0.8rem; color: #666; line-height: 1.5; flex-grow: 1; }
+        .price-row { margin-top: 20px; display: flex; justify-content: space-between; align-items: center; }
+        .price { font-family: 'Cinzel'; font-weight: bold; font-size: 1.2rem; }
+        .btn-add { background: var(--blue); color: white; border: none; padding: 10px 15px; font-family: 'Cinzel'; font-size: 0.7rem; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <aside class="filter-sidebar">
+        <div style="font-family:'Cinzel'; color:var(--gold); margin-bottom:40px; font-size: 1.2rem;">THE FOUNDRY</div>
+        
+        <div class="filter-group">
+            <h4>CATEGORIES</h4>
+            <a href="#" class="filter-link">Guardianship Bundles</a>
+            <a href="#" class="filter-link">Developmental Care</a>
+            <a href="#" class="filter-link">Political Prep</a>
+            <a href="#" class="filter-link">Ambition Certs</a>
+        </div>
+
+        <div class="filter-group">
+            <h4>BUREAU SPECIALS</h4>
+            <a href="#" class="filter-link">Grant-Funded Kits</a>
+            <a href="#" class="filter-link">Scholarship Downloads</a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <div class="grid-header">
+            <h1 style="font-family:'Cinzel'; margin:0;">Youth Digital Vault</h1>
+            <div class="text-logo">YOUNG POLITICIANS COLLECTIVE</div>
+        </div>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <span class="cat-tag">Guardianship</span>
+                <h3>Sovereign Youth Trust Bundle</h3>
+                <p>Complete legal framework for private guardianship and legacy protection for the next generation.</p>
+                <div class="price-row">
+                    <span class="price">$149.00</span>
+                    <button class="btn-add">ADD TO VAULT</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="cat-tag">Political Prep</span>
+                <h3>The Legislative Gavel Course</h3>
+                <p>12-Part masterclass on drafting Village Laws and mastering municipal political structures.</p>
+                <div class="price-row">
+                    <span class="price">$85.00</span>
+                    <button class="btn-add">ADD TO VAULT</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <span class="cat-tag">Development</span>
+                <h3>Goodness Code Tracker</h3>
+                <p>A private, biometric-ready ledger for tracking cognitive and character milestones.</p>
+                <div class="price-row">
+                    <span class="price">$45.00</span>
+                    <button class="btn-add">ADD TO VAULT</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
