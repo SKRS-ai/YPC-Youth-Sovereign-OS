@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sovereign Wallet | YPC Finance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --blue: #0a192f; --gold: #c5a059; --slate: #111; --white: #ffffff; --green: #2ecc71; }
+        body { margin: 0; display: flex; font-family: 'Inter', sans-serif; background: #000; color: white; }
+
+        /* Sidebar Navigation */
+        .sidebar { width: 280px; background: var(--blue); height: 100vh; position: fixed; padding: 40px 20px; box-sizing: border-box; }
+        .sidebar a { display: block; color: rgba(255,255,255,0.7); text-decoration: none; padding: 15px 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 0.8rem; }
+        
+        /* Main Wallet UI */
+        .main-content { margin-left: 280px; width: 100%; padding: 60px; box-sizing: border-box; }
+        .wallet-card { 
+            background: linear-gradient(135deg, var(--blue) 0%, #162a4a 100%); 
+            border: 1px solid var(--gold); padding: 40px; border-radius: 15px; 
+            margin-bottom: 40px; position: relative; overflow: hidden;
+        }
+        .wallet-card::after { content: ""; position: absolute; top: -50%; right: -20%; width: 300px; height: 300px; background: var(--gold); opacity: 0.05; border-radius: 50%; }
+        
+        .balance-label { font-family: 'Cinzel'; font-size: 0.8rem; color: var(--gold); letter-spacing: 2px; }
+        .balance-amount { font-size: 3.5rem; font-weight: bold; margin: 10px 0; display: block; }
+        
+        /* Transaction Ledger */
+        .ledger { background: #0a0a0a; border: 1px solid #222; padding: 30px; }
+        .ledger-header { display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #333; padding-bottom: 15px; margin-bottom: 20px; }
+        .ledger-row { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #111; font-size: 0.9rem; }
+        .amount-pos { color: var(--green); }
+        .amount-neg { color: #e74c3c; }
+
+        .btn-action { background: var(--gold); color: black; border: none; padding: 12px 25px; font-family: 'Cinzel'; font-weight: bold; cursor: pointer; font-size: 0.7rem; letter-spacing: 1px; }
+    </style>
+</head>
+<body>
+
+    <nav class="sidebar">
+        <div style="font-family:'Cinzel'; color:var(--gold); margin-bottom:40px; font-size: 1.1rem;">TRUST PORTAL</div>
+        <a href="ypc-dashboard.html">Dashboard</a>
+        <a href="ypc-wallet.html" style="color:var(--gold);">Sovereign Wallet</a>
+        <a href="ypc-marketplace.html">Foundry Shop</a>
+        <a href="ypc-guardian.html">Guardian Access</a>
+    </nav>
+
+    <div class="main-content">
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 20px;">
+            <h1 style="font-family: 'Cinzel'; margin: 0;">Sovereign Trust</h1>
+            <span style="font-size: 0.7rem; color: #666; font-family: 'Cinzel';">ID: TBB-LEDGER-09441</span>
+        </div>
+
+        <div class="wallet-card">
+            <span class="balance-label">TOTAL VILLAGE CREDITS (VC)</span>
+            <span class="balance-amount">2,450.00</span>
+            <div style="display: flex; gap: 20px;">
+                <button class="btn-action">MARKETPLACE EXCHANGE</button>
+                <button class="btn-action" style="background:transparent; border:1px solid white; color:white;">TRANSFER TO TRUST</button>
+            </div>
+        </div>
+
+        <div class="ledger">
+            <div class="ledger-header">
+                <h3 style="font-family:'Cinzel'; margin:0;">Activity Ledger</h3>
+                <span style="font-size: 0.7rem; color: #888;">REAL-TIME UPDATES</span>
+            </div>
+
+            <div class="ledger-row">
+                <span>Completed "Civic Lab: Resource Gap" Simulation</span>
+                <span class="amount-pos">+ 500 VC</span>
+            </div>
+            <div class="ledger-row">
+                <span>Acquired "Legislative Gavel Level 1" Certification</span>
+                <span class="amount-neg">- 150 VC</span>
+            </div>
+            <div class="ledger-row">
+                <span>Monthly Sustainment Grant (Ford Foundation)</span>
+                <span class="amount-pos">+ 1,000 VC</span>
+            </div>
+            <div class="ledger-row">
+                <span>Node Workshop Attendance: Philly #04</span>
+                <span class="amount-pos">+ 200 VC</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
